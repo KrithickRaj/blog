@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="logo">
+            <a href="/">{{ .Site.Title}}</a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">My Blog</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/posts/">Posts</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        
+    </header>
+    <main class="site-main">
+        <div class="container">
+            {{block "main" . }}
+            {{end}}
+        </div>
+            
+            
+    </main>
+    <footer class="bg-primary text-white"id="site-footer">
+        <div class="copyright text-center pb-4 pt-4">
+            &copy;2022{{ .Site.Title}}
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

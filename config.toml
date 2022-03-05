@@ -1,0 +1,7 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+paginate=2
+[Params]
+dateFormat ="jan2, 2016, 3:04pm"
+
